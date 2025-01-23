@@ -1,0 +1,66 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+	background: linear-gradient(-45deg, #ffffff, #ffdfef, #dae9ff, #dcffdc, #ffebd7);
+    /*background: linear-gradient(-45deg, #ffffff, #cdcdcd, #c5c5c5, #cbcbcb, #e1e1e1);*/
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.container,
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__title {
+    font-family: "Archivo Black", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+}
+
+.main__subtitle {
+    font-family: "Raleway", serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1rem;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}

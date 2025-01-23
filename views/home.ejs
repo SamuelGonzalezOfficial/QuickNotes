@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +8,68 @@
     <link rel="stylesheet" href="/public/assets/styles/styles.css">
     <link rel="stylesheet" href="/public/assets/styles/home.css">
 </head>
+
 <body>
+    <div id="particles-js"></div>
     <nav class="nav">
-        <span class="logo">W</span>
+        <span class="logo"></span>
     </nav>
     <main class="container">
         <section class="main">
-            <h1 class="title main__title">Create quick notes with Faster</h1>
-            <h2 class="subtitle main__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, enim. Voluptatum amet voluptate accusantium animi.</h2>
-            <button class="btn main__btn"><a href="#">Create a note</a></button>
+            <h1 class="title main__title animated-text">Notes Made Simpler</h1>
+            <h2 class="subtitle main__subtitle animated-text">Effortlessly create, manage, and access your notes
+                wherever you are.</h2>
+            <button class="btn main__btn animated-text"><a href="#" class="btn__link main__link">Create a
+                    note</a></button>
         </section>
     </main>
 
     <script src="/public/assets/scripts/scripts.js"></script>
     <script src="/public/assets/scripts/home.js"></script>
+
+    <!-- Import Particles.js and app.js files -->
+    <script src="/public/assets/scripts/particles.js/particles.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 100,
+                    "density": {
+                        "enable": false,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#fff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "size": {
+                    "value": 3
+                },
+                "opacity": {
+                    "value": 1,
+                    "random": false,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                // más configuraciones...
+            }
+        });
+
+    </script>
 </body>
+
 </html>
