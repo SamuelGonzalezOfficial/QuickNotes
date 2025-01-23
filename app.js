@@ -5,6 +5,9 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const override = require('method-override')
 
+const router = require('./routes/routes')
+const routerNotes = require('./routes/notes')
+
 //Create express app
 const app = express()
 
@@ -18,9 +21,8 @@ app.use(bodyParser.json())
 app.use(override('_method'))
 
 //Routes
-app.get('/', (req, res) => {
-    res.render('home')
-})
+app.use('/', router)
+app.use('/notes', routerNotes)
 
 
 module.exports = app
