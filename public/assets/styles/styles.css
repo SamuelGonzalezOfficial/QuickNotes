@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --primary-color: #000;
+    --secondary-color: #e7ffcb;
+    --btn-color: #ff6b6b;
+    --btn-shadow-color: rgba(255, 107, 107, 0.5);
+    --font-title: "Archivo Black", serif;
+    --font-body: "Raleway", serif;
+}
+
+.button {
+    color: var(--primary-color);
+}
+
+
 * {
     margin: 0;
     padding: 0;
