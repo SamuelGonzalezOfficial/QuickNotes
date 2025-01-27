@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #000;
+    --secondary-color: #e7ffcb;
+    --btn-color: #ff6b6b;
+    --btn-shadow-color: rgba(255, 107, 107, 0.5);
+    --font-title: "Archivo Black", serif;
+    --font-body: "Raleway", serif;
+    --note-bg-color: #f9f9f9;
+    --note-border-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+header .menu {
+    display: flex;
+    gap: 1rem;
+}
+
+header .menu a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-family: var(--font-body);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+header .menu a:hover {
+    background-color: var(--btn-color);
+    color: #fff;
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    color: #000;
+    background: rgba(255, 255, 255, 0);
+    margin: 1rem 10px;
+    padding: 12px 15px;
+    border: 4px solid #000;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative; 
+    overflow:hidden; 
+    transition: .3s;
+    z-index: 1;
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: #e7ffcb;
+}
+
+.btn:before {
+    position: absolute;
+    transition: .3s;
+    content: '';
+    top: 50%;
+    background: #000;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    left: 50%;
+    z-index: -1;
+    transform-origin: center;
+    transform: translate(-50%, -50%);
+}
+
+.btn:hover:before {
+    width: 11em;
+    height: 11em;
+}
+
+.notes-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.note {
+    background-color: var(--note-bg-color);
+    border: 1px solid var(--note-border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.note:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.note h3 {
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.note p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Mobile Design */
+@media (max-width: 768px) {
+    .notes-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+}
+
+/* Web Design */
+@media (min-width: 769px) {
+
+    .notes-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .note {
+        width: calc(30% - 2rem);
+        height: 200px;
+        position: relative;
+    }
+}
