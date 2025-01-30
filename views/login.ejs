@@ -1,19 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faster - Create quick notes with just a click</title>
-    <link rel="stylesheet" href="/public/assets/styles/styles.css">
-    <link rel="stylesheet" href="/public/assets/styles/form.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="utf-8">
+    <title>QuickNotes - Sign in</title>
+    <link rel="stylesheet" type="text/css" href="/public/assets/styles/form.css">
+    <link rel="stylesheet" type="text/css" href="/public/assets/styles/keyframes.css">
 </head>
 
 <body>
+    <div class="login-root">
 
+        <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+            <!--Particles background-->
+            <!--<div id="particles-js"></div>-->
+            <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+                <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+                    <h1 class="title"><a href="/" rel="dofollow" class="title__link">QuickNotes</a></h1>
+                </div>
+                <div class="formbg-outer">
+                    <div class="formbg">
 
+                        <div class="formbg-inner padding-horizontal--48">
+                            <span class="padding-bottom--15">Sign in to your account</span>
+                            <form id="stripe-login" href="/login" method="post">
 
+                                <div class="field padding-bottom--24">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" required>
+                                </div>
+
+                                <div class="field padding-bottom--24">
+                                    <div class="grid--50-50">
+                                        <label for="password">Password</label>
+                                        <div class="reset-pass">
+                                            <a href="#">Forgot your password?</a>
+                                        </div>
+                                    </div>
+                                    <input type="password" name="password" required>
+                                </div>
+
+                                <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
+                                    <label for="checkbox">
+                                        <input type="checkbox" name="checkbox"> Stay signed in for a week
+                                    </label>
+                                </div>
+
+                                <div class="field">
+                                    <button type="submit" class="button">Log In</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="footer-link padding-top--24">
+                        <span>Don't have an account? <a href="/signup">Sign up</a></span>
+                        <!--
+                        <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
+                            <span><a href="#">© QuickNotes App - Samuel Gonz&aacute;lez 2025</a></span>
+                            <span><a href="#">Contact</a></span>
+                            <span><a href="#">Privacy & terms</a></span>
+                        </div>
+                    -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Import Particles.js and app.js files -->
+    <script src="/public/assets/scripts/particles.js/particles.js"></script>
+    <script>
+        particlesJS("particles-js", { "particles": { "number": { "value": 96, "density": { "enable": true, "value_area": 800 } }, "color": { "value": "#6d6d6d" }, "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 }, "image": { "src": "img/github.svg", "width": 100, "height": 100 } }, "opacity": { "value": 0.3, "random": false, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } }, "size": { "value": 2, "random": false, "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false } }, "line_linked": { "enable": true, "distance": 180, "color": "#6d6d6d", "opacity": 0.4, "width": 1 }, "move": { "enable": true, "speed": 6, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" }, "resize": true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true }); var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function () { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);
+    </script>
 </body>
 
 </html>
