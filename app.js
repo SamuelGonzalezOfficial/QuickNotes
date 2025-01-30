@@ -3,6 +3,7 @@
 //Required modules
 const express = require('express')
 const bodyParser = require('body-parser')
+const cookieParser = require('cookie-parser')
 const override = require('method-override')
 
 const router = require('./routes/routes')
@@ -19,6 +20,7 @@ app.use('/public', express.static('public'))
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 app.use(override('_method'))
+app.use(cookieParser())
 
 //Routes
 app.use('/', router)
