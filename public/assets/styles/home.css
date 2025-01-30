@@ -50,6 +50,7 @@ body {
     font-style: normal;
     font-size: 5rem;
     text-align: center;
+    animation: moveUpText 0.6s ease;
 }
 
 .main__subtitle {
@@ -57,6 +58,7 @@ body {
     font-weight: 400;
     text-align: center;
     font-size: 1rem;
+    animation: moveUpText 0.8s ease;
 }
 
 .button {
@@ -73,6 +75,7 @@ body {
     overflow:hidden; 
     transition: .3s;
     z-index: 1;
+    animation: moveUp 1s ease;
 }
 
 .button:hover {
