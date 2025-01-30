@@ -4,7 +4,7 @@ const middleware = async function (req, res, next) {
     const token = req.cookies.token
 
     if(!token){
-        res.status(401).send({error: 'Access denied'})
+        return res.redirect('/login')
     }
 
     try {
@@ -14,7 +14,7 @@ const middleware = async function (req, res, next) {
         return next()
     } catch(e){
         console.error(e)
-        return res.status(403).send({error: 'Invalid or expired token'})
+        return res.redirect('/login')
     }
 }
 
