@@ -94,7 +94,7 @@ function logout(event) {
 
 }
 
-document.querySelector('.nav-icon img[src="/public/assets/images/icons8-plus-math-50.png"]').parentElement.addEventListener('click', function (event) {
+document.querySelector('.nav-icon img[src="/assets/images/icons8-plus-math-50.png"]').parentElement.addEventListener('click', function (event) {
     event.preventDefault();
     document.getElementById('popup').style.display = 'flex';
 });
