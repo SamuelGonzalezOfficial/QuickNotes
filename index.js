@@ -5,8 +5,8 @@ const mongoose = require('mongoose')
 
 const app = require('./app')
 
-const port = process.env.port || 3000
-const db = process.env.db
+const port = process.env.PORT || 3000
+const db = process.env.DB
 
 mongoose.Promise = global.Promise
 mongoose.connect(db)
