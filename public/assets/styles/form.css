@@ -239,3 +239,57 @@ a.ssolink {
     overflow: hidden;
     z-index: 9;
 }
+
+@media (max-width: 768px) {
+    /* Ajusta el contenedor principal para que tenga márgenes */
+    .login-root {
+      padding: 20px;
+    }
+  
+    /* La caja del formulario se adapta para pantallas medianas */
+    .formbg {
+      margin: 20px auto;
+      width: 100%;
+      max-width: 90%;
+    }
+  
+    /* Reduce el padding horizontal interno */
+    .padding-horizontal--48 {
+      padding: 20px;
+    }
+  
+    /* Ajusta el tamaño del título */
+    h1 {
+      font-size: 1.8rem;
+      letter-spacing: -0.5px;
+    }
+  
+    /* Botón con padding y fuente ajustados */
+    .button {
+      padding: 10px 12px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Para dispositivos aún más pequeños, reduce aún más el padding interno */
+    .formbg-inner {
+      padding: 15px;
+    }
+  
+    /* Ajusta el tamaño del texto en spans e inputs */
+    span {
+      font-size: 1.2rem;
+    }
+  
+    .field input {
+      font-size: 14px;
+      padding: 6px 10px;
+    }
+  
+    /* Opcional: Ajusta la distribución de la grilla en el label y el enlace de "Forgot your password?" */
+    .grid--50-50 {
+      grid-template-columns: 1fr;
+    }
+  }
+  
